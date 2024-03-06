@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8" />
+<title>Math - Écris en chiffre</title>
+<meta name="apple-mobile-web-app-title"content="Math - Écris en chiffre">
+<meta name="application-name" content="Math - Écris en chiffre">
+<link rel='stylesheet' href='css/styles.css' type='text/css' media='all' />
+<link rel="icon" href="img/icon.png" />
+<link rel="apple-touch-icon-precomposed"  href="img/icon.png" />
+<meta name='viewport' content='width=device-width, initial-scale=1.0,user-scalable=yes,' />
+<meta name="apple-mobile-web-app-capable" content="yes">
+</head> 
+<body>
+<header>
+	<div class="status-bar">
+		<a class="a-h1" href="index.html"><h1>Math</h1></a>
+	</div>
+	<nav>
+		<h2 id="open-para" class="flex space-between">Paramètres<div ><span id="indicator-para">∨</span></div></h2>
+		<div class="containerPara" id="parametre">
+			<div class="parametreDiv font-size18" id="parametreDiv">
+				<div>
+					<label class="labelOne">Nombre de calculs </label>:
+					<input class="width33 font-size18" id="numberEssais" type="number" value="7"/>
+				</div>
+				<div>
+					<label class="labelOne">Type</label>:
+					<select class="width33 font-size18" name="typeCalcul" id="typeCalcul">
+						<option value="0" selected>Chiffres</option>
+						<option value="1" >Lettres</option>
+					</select>
+				</div>
+				<div>
+					<label class="labelOne"></label>
+					
+				</div>
+			</div>
+		</div>
+	</nav>
+</header>	
+<section>
+<div class="container" id="calcul">
+	<h2 class="flex space-between" style="background: #EEEEEE;">Écris en chiffre</h2>
+	<div class="flex space-between" style="background: #EEEEEE;padding: 0 10px;"><div class="font-size14" id="reportNbCalcul"></div><div class="font-size14" id="reportTypeCalcul"></div></div>
+	<div class="" style="background: #EEEEEE;text-align: center;"><button style="width: 90%;" id="lanceJeux">Lancer</button></div>
+	<div class="zoneCalcul" id="zoneCalcul" style="display: none;">
+		<div id="essaisRest" class="font-size20"><label>essais restant </label><span id="essaisRestant" style="color: blue"></span></div>
+		<form class="form font-size20" id="zoneForm" style="display: none;" onsubmit="alert('Submitted');">
+		<!--<span id="chiffreEnLettre"></span>-->
+				<div class="flex width100">
+							<div class="numberLetter" id="chiffreEnLettre"></div>
+							<div class="sign" id="equal">=</div>
+							<div class="result"><input class="result font-size26" id="result" type="number" step="1" min="0" pattern="[\d]{9}" required="'required'"/></div>
+				</div>
+				<div class="margin-center width100 margin-top10 textCenter"><input type="submit" class="button-valide font-size20 width90" value="Valider" id="newCalcul" /></div>
+		</form>	
+	</div>	
+</div>	
+<div class="container">
+	<p class="font-size16 " id="zoneResult" style="background: #d9d9d9;width: 100%;"></p>	
+</div>	
+	
+	
+</section>
+</body>
+<!---comun au 3 ---->
+<script  src="js/standalone.js"></script>
+<!---comun au 3 ---->
+<script  src="js/openparameter.js"></script>
+<!---comun au 3 ---->
+<script  src="js/divScore.js"></script>
+<!---comun au 3 ---->
+<script  src="js/date.js"></script>
+<!---comun au 3 ---->
+<script  src="js/affiche.js"></script>
+
+<script  src="js/js2.js"></script>
+<script  src="js/save.js"></script>
+
+</html>

@@ -1,0 +1,3 @@
+- indice nombre maximun possible
+- mix de tous les exercices
+- prevoir dizaine unité

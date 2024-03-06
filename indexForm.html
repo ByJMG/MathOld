@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8" />
+<title>Calcul</title>
+<meta name="apple-mobile-web-app-title"content="Calcul">
+<link rel='stylesheet' href='css/styles.css' type='text/css' media='all' />
+<link rel="icon" href="img/icon.png" />
+<link rel="apple-touch-icon-precomposed"  href="img/icon.png" />
+<meta name='viewport' content='width=device-width, initial-scale=1.0,user-scalable=no,' />
+<meta name="apple-mobile-web-app-capable" content="yes">
+</head> 
+<body>
+<header>
+	<div class="status-bar">
+		<h1>CalculsTraining</h1>
+	</div>
+	<nav>
+		<h2 id="open-para" class="flex space-between">Paramètres<div ><span id="indicator-para">∨</span></div></h2>
+		<div class="containerPara" id="parametre">
+			<div class="parametreDiv font-size18" id="parametreDiv">
+				<div>
+					<label class="labelOne">Nombre de calculs </label>:
+					<input class="width33 font-size18" id="numberEssais" type="number" value=""/>
+				</div>
+				<div>
+					<label class="labelOne">Type d'operation </label>:
+					<select class="width33 font-size18" name="typeCalcul" id="typeCalcul">
+						<option value="0">Addition</option>
+						<option value="1">Soustraction</option>
+						<option value="2">Hasard</option>
+					</select>
+				</div>
+				<div>
+					<label class="labelOne">Nombre Maximum </label>:
+					<select class="width33 font-size18" name="numberMax" id="numberMax">
+						<option value="1">10</option>
+						<option value="10">100</option>
+						<option value="100">1000</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</nav>
+</header>	
+<section>
+<div class="container" id="calcul">
+	<h2 class="flex space-between" style="background: #e3e3e3;">Calculs</h2>
+	<div class="flex space-between" style="background: #e3e3e3;padding: 0 10px;"><div class="font-size14" id="reportNbCalcul"></div><div class="font-size14" id="reportTypeCalcul"></div><div class="font-size14" id="reportNbMax"></div></div>
+	<div class="" style="background: #e3e3e3;text-align: center;"><button style="width: 90%;" id="lanceJeux">Lancer</button></div>
+	<div class="zoneCalcul" id="zoneCalcul" >
+		<div id="essaisRest" class="font-size20"><label>essais restant </label><span id="essaisRestant" style="color: blue"></span></div>
+		<form class="form font-size26" id="zoneForm" style="display: none;" onsubmit="alert('Submitted');">
+			<div class="flex space-between">
+				<div class="flex width50">
+					<div class="number" id="numberOne">12</div>
+					<div class="sign" id="operation">+</div>
+					<div class="number" id="numberTwo">24</div>
+					<div class="sign" id="equal">=</div>
+					<div class="result"><input class="result font-size26" id="result" type="number" step="1" min="0" pattern="[\d]{9}" required="'required'"/></div>
+				</div>
+				<div class="flex width50 textCenter">
+					<div class="green  margin-center width50"><input type="submit" class="button-valide font-size20 width100" value="Valider" id="newCalcul" /></div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+<div class="container">
+	<p class="font-size17 " id="zoneResult" style="background: #d9d9d9;width: 100%;"></p>	
+</div>	
+	
+	
+</section>	
+	
+	
+	
+</body>
+<script  src="js/date.js"></script>
+<script  src="js/HasardTypeOperation.js"></script>
+<script  src="js/js.js"></script>
+
+<script  src="js/save.js"></script>
+
+</html>

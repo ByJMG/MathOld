@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8" />
+<title>Math - Plus grand ou Plus petit ?</title>
+<meta name="apple-mobile-web-app-title"content="Math - Plus grand ou Plus petit ?">
+<link rel='stylesheet' href='css/styles.css' type='text/css' media='all' />
+<link rel="icon" href="img/icon.png" />
+<link rel="apple-touch-icon-precomposed"  href="img/icon.png" />
+<meta name='viewport' content='width=device-width, initial-scale=1.0,user-scalable=yes,' />
+<meta name="apple-mobile-web-app-capable" content="yes">
+</head> 
+<body>
+<header>
+	<div class="status-bar">
+		<a class="a-h1" href="index.html"><h1>Math</h1></a>
+	</div>
+	<nav>
+		<h2 id="open-para" class="flex space-between">Paramètres<div ><span id="indicator-para">∨</span></div></h2>
+		<div class="containerPara" id="parametre">
+			<div class="parametreDiv font-size18" id="parametreDiv">
+				<div>
+					<label class="labelOne">Nombre de calculs </label>:
+					<input class="width33 font-size18" id="numberEssais" type="number" value=""/>
+				</div>
+				<div>
+					<label class="labelOne">Type</label>:
+					<select class="width33 font-size18" name="typeCalcul" id="typeCalcul">
+						<option value="0">Lettres (Plus grand ou Petit)</option>
+						<option value="1" selected>SYMBOLE (< >)</option>
+						<option value="2">Mix</option>
+					</select>
+				</div>
+				<div>
+					<label class="labelOne"></label>
+					
+				</div>
+			</div>
+		</div>
+	</nav>
+</header>	
+<section>
+<div class="container" id="calcul">
+	<h2 class="flex space-between" style="background: #EEEEEE;">Plus grand ou Plus petit ?</h2>
+	<div class="flex space-between" style="background: #EEEEEE;padding: 0 10px;"><div class="font-size14" id="reportNbCalcul"></div><div class="font-size14" id="reportTypeCalcul"></div></div>
+	<div class="" style="background: #EEEEEE;text-align: center;"><button style="width: 90%;" id="lanceJeux">Lancer</button></div>
+	<div class="zoneCalcul" id="zoneCalcul" style="display: none;">
+		<div id="essaisRest" class="font-size20"><label>essais restant </label><span id="essaisRestant" style="color: blue"></span></div>
+		<form class="form font-size20" id="zoneForm" style="display: none;" onsubmit="alert('Submitted');">
+		<!--<span id="chiffreEnLettre"></span>-->
+				<div class="flex space-around width100">
+							<div class="number" id="number-one">12</div>
+							<select class="select-sign" id="select-sign">
+								<option value="c">Choix</option>
+								<option id="small" value="0">Plus petit (<)</option>
+								<option id="big" value="1">Plus grand (>)</option>
+								<option id="equal" value="2">Égal (=)</option>
+							</select>
+							<div class="number" id="number-two">24</div>
+				</div>
+				<div class="margin-center width100 margin-top10 textCenter"><input type="submit" class="button-valide font-size20 width90 " value="Valider" id="newCalcul" /></div>
+		</form>	
+	</div>	
+</div>	
+<div class="container">
+	<p class="font-size17 " id="zoneResult" style="background: #d9d9d9;width: 100%;"></p>	
+</div>	
+	
+	
+</section>
+</body>
+<script  src="js/commun.js"></script>
+<script  src="js/js3.js"></script>
+<script  src="js/save.js"></script>
+
+</html>
